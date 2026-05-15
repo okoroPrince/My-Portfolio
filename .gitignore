@@ -1,0 +1,17 @@
+# Python junk
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Windows junk
+Thumbs.db
+desktop.ini
+
+# IDE junk
+.vscode/
+.idea/
+
+# Node junk (if you use it later)
+node_modules/
