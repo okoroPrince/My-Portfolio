@@ -10,7 +10,7 @@ navLinks.forEach(function(link) {
     })
 })
 
-const skillCards = document.querySelectorAll(".skill-card")
+const skillCards = document.querySelectorAll(".skill-card",)
 
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
@@ -23,3 +23,4 @@ const observer = new IntersectionObserver(function(entries) {
 skillCards.forEach(function(card) {
     observer.observe(card)
 })
+
