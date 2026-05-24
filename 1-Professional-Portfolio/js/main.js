@@ -24,3 +24,90 @@ skillCards.forEach(function(card) {
     observer.observe(card)
 })
 
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.from("#hero h1", {
+    opacity: 0,
+    y: 60,
+    duration: 1,
+    ease: "power3.out"
+})
+
+gsap.from("#hero p", {
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    delay: 0.3,
+    ease: "power3.out"
+})
+
+gsap.from("#hero .btn", {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    delay: 0.6,
+    ease: "power3.out",
+    stagger: 0.2
+})
+
+gsap.from("#about img", {
+    scrollTrigger: {
+        trigger: "#about img",
+        start: "top 80%"
+    },
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    ease: "power3.out"
+})
+
+gsap.from("#about .col-md-6:last-child", {
+    scrollTrigger: {
+        trigger: "#about",
+        start: "top 80%"
+    },
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    ease: "power3.out"
+})
+
+gsap.from("#projects .col-md-4", {
+    scrollTrigger: {
+        trigger: "#projects",
+        start: "top 80%"
+    },
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    ease: "power3.out"
+})
+
+const codeLines = [
+    'const developer = {',
+    '  name: "Prince Okoro",',
+    '  university: "Babcock",',
+    '  skills: ["Python", "Java",',
+    '           "JS", "C++"],',
+    '  available: true,',
+    '  passion: "Building things',
+    '            that matter"',
+    '}',
+    '',
+    'console.log(developer.name)',
+    '// "Prince Okoro"'
+]
+
+const terminalCode = document.getElementById("terminal-code")
+let fullText = codeLines.join('\n')
+let index = 0
+
+function typeCode() {
+    if (index < fullText.length) {
+        terminalCode.textContent += fullText[index]
+        index++
+        setTimeout(typeCode, 35)
+    }
+}
+
+typeCode()
