@@ -91,7 +91,7 @@ const codeLines = [
     '           "JS", "C++"],',
     '  available: true,',
     '  passion: "Building things',
-    '            that matter"',
+    '            that intrigue me"',
     '}',
     '',
     'console.log(developer.name)',
