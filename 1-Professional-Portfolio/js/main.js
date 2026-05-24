@@ -111,3 +111,21 @@ function typeCode() {
 }
 
 typeCode()
+
+emailjs.init("AE_KB6WdDr9Geakxy")
+
+const contactForm = document.querySelector(".Contact-form")
+
+contactForm.addEventListener("submit", function(e) {
+    e.preventDefault()
+
+    emailjs.sendForm("service_dmougod", "template_z2pe4zq", this)
+        .then(function() {
+            alert("Message sent successfully!")
+            contactForm.reset()
+        })
+        .catch(function(error) {
+            alert("Failed to send message. Please try again.")
+            console.error(error)
+        })
+})
