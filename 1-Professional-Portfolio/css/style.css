@@ -486,4 +486,17 @@ footer p {
     #about .col-md-6:first-child {
         padding-right: 0;
     }
+    #hero .col-md-6 {
+        text-align: center;
+    }
+    #hero .btn {
+        margin-bottom: 0.5rem;
+    }
+    #about .col-md-6 {
+        text-align: center;
+    }
+    #about h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
