@@ -15,8 +15,9 @@ html {
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 /* navbar */
 .navbar{
@@ -481,5 +482,8 @@ footer p {
 @media (max-width: 768px) {
     .terminal {
         display: none;
+    }
+    #about .col-md-6:first-child {
+        padding-right: 0;
     }
 }
