@@ -499,4 +499,12 @@ footer p {
         left: 50%;
         transform: translateX(-50%);
     }
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
